@@ -31,7 +31,7 @@ I uploaded apk and ipa file to diawi, I used free account, so these files will b
 ## Design Pattern:
 1. GetX design Pattern for easy coding.
 
-## App Preview:
+## App screenshots:
 
 ### Open App and load data success
 
