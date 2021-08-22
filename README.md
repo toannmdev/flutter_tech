@@ -1,7 +1,4 @@
 # toannm_test
+## API management platform testing
 
-Public project for Flutter Technology
-
-## Branch linagora
-
-Get users from api, code with GetX and basic unit testing.
+[WS02](https://apim.docs.wso2.com/en/latest/get-started/overview/)
