@@ -20,7 +20,7 @@ For search feature (Optional extra)
 - About unit test, I skip this.
 
 ## Install
-I uploaded apk and ipa file to diawi, I used free account, so these files will be expired on `Tuesday, 25/08/2021 14:00`
+I uploaded apk and ipa file to diawi, I used free account, so these files will be expired on `Wednesday, 25/08/2021 14:00`
 ### On Android
 1. Open link: [diawi android](https://i.diawi.com/XQ5KDX) 
 2. Download apk file, and install it.
