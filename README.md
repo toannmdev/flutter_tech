@@ -20,7 +20,7 @@ For search feature (Optional extra)
 - About unit test, I skip this.
 
 ## Install
-I uploaded apk and ipa file to diawi, I used free account, so these files will be expired on `Tuesday, 24/08/2021 14:00`
+I uploaded apk and ipa file to diawi, I used free account, so these files will be expired on `Tuesday, 25/08/2021 14:00`
 ### On Android
 1. Open link: [diawi android](https://i.diawi.com/XQ5KDX) 
 2. Download apk file, and install it.
@@ -32,8 +32,8 @@ I do not have any iOS device here, so I can not download and seft test this rele
 
 If you can not download install file, please contact me via:
 - gmail: [Mail to ToanNM](mailto:toannm.jsc@gmail.com) 
-- skype: [Chat with ToanNM via Skype](skype:gs.hbsky?chat)
-- phone: [Tel: (+84) 985.942.382](tel:+84985942382)
+- skype: gs.hbsky
+- phone: (+84)985942382
 
 ## Design Pattern:
 1. GetX design Pattern for easy coding.
