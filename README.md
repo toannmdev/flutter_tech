@@ -31,10 +31,17 @@ I uploaded apk and ipa file to diawi, I used free account, so these files will b
 ## Design Pattern:
 1. GetX design Pattern for easy coding.
 
+## App Preview:
+
+### Open App and load data success
+
 ![Open App and load data success](https://github.com/toannmdev/flutter_tech/blob/demo/notification_page/upload/Full_Data.png)
+
+### Search and has result
 
 ![Search and has result](https://github.com/toannmdev/flutter_tech/blob/demo/notification_page/upload/Search_Has_Result.png)
 
+### Search and has no result
 
 ![Search and has no result](https://github.com/toannmdev/flutter_tech/blob/demo/notification_page/upload/Search_No_Result.png)
 
