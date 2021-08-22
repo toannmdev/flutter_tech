@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,8 +11,6 @@ void main() {
       statusBarColor: Colors.white,
       statusBarBrightness: Brightness.light,
       statusBarIconBrightness: Brightness.dark));
-
-  HttpOverrides.global = new MyHttpOverrides();
 
   runApp(MyApp());
 }
@@ -45,14 +41,5 @@ class MyBehavior extends ScrollBehavior {
   Widget buildViewportChrome(
       BuildContext context, Widget child, AxisDirection axisDirection) {
     return child;
-  }
-}
-
-class MyHttpOverrides extends HttpOverrides {
-  @override
-  HttpClient createHttpClient(SecurityContext? context) {
-    return super.createHttpClient(context)
-      ..badCertificateCallback =
-          (X509Certificate cert, String host, int port) => true;
   }
 }
