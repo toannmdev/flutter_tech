@@ -15,11 +15,11 @@ https://www.figma.com/file/i4cmuJhojWnVpoF9uqY8Gi/Untitled?node-id=0%3A1
 For search feature (Optional extra)
 
 - Tap search icon to display search bar
-- Search notifications by filter `notification.messsage.text` (search in local results that got from API get list notification): Provide accent remover: For example: when search for `Hôm nay```, results can be `hom nay` or `hôm nay`
+- Search notifications by filter `notification.messsage.text` (search in local results that got from API get list notification): Provide accent remover: For example: when search for `Hôm nay`, results can be `hom nay` or `hôm nay`
 - Tap `X` icon to return to list notification screen, hide search bar & search result
 
 ## Install
-I uploaded apk and ipa file to diawi, I used free account, so these files will be expired on 
+I uploaded apk and ipa file to diawi, I used free account, so these files will be expired on `Tuesday, 24/08/2021 14:00`
 ### On Android
 1. Open link: [diawi android](https://pages.github.com/) 
 2. Download apk file, and install it.
@@ -27,6 +27,11 @@ I uploaded apk and ipa file to diawi, I used free account, so these files will b
 ### On iOS:
 1. Open link with safari: [diawi iOS](https://pages.github.com/) 
 2. Accept installing.
+
+If you can not download install file, please contact me via:
+- gmail: toannm.jsc@gmail.com
+- skype: gs.hbsky
+- phone: 0985.942.382
 
 ## Design Pattern:
 1. GetX design Pattern for easy coding.
