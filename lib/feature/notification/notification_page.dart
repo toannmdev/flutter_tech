@@ -60,6 +60,7 @@ class NotificationPage extends GetView {
     Widget _buildInputSearch() {
       return Expanded(
         child: CupertinoSearchTextField(
+          controller: controller.searchEdittingController,
           prefixInsets: const EdgeInsetsDirectional.fromSTEB(6, 0, 14, 4),
           onChanged: (filterText) => controller.onFilterData(filterText),
           focusNode: controller.searchFocus,
@@ -88,7 +89,7 @@ class NotificationPage extends GetView {
         : controller.data.length > 0
             ? SmartRefresher(
                 controller: controller.refreshController,
-                onRefresh: () => controller.onRefresh(),
+                onRefresh: () => controller.onRefreshData(),
                 enablePullDown: true,
                 child: ListView.builder(
                   itemBuilder: (context, index) =>
@@ -100,32 +101,37 @@ class NotificationPage extends GetView {
   }
 
   Widget _buildError() {
+    Widget _buildErrorContent() {
+      return RichText(
+        text: TextSpan(
+          children: [
+            const TextSpan(
+                text: "No data when searching by: ",
+                style: AppStyle.textNormalStyle),
+            TextSpan(
+                text: "'${controller.filterText}'",
+                style: AppStyle.textBoldStyle),
+          ],
+        ),
+        textAlign: TextAlign.center,
+      );
+    }
+
+    Widget _buildErrorAction() {
+      return TextButton(
+        onPressed: () => controller.clearFilter(),
+        child: const Text('Clear Filter'),
+      );
+    }
+
     // TODO (toannm): translate string
     return Container(
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                    text: "No data when searching by: ",
-                    style: AppStyle.textNormalStyle),
-                TextSpan(
-                    text: "'${controller.filterText}'",
-                    style: AppStyle.textBoldStyle),
-              ],
-            ),
-            textAlign: TextAlign.center,
-          ),
-          TextButton(
-            onPressed: () {
-              controller.filterText = '';
-              controller.onRefresh();
-            },
-            child: Text('Clear Filter'),
-          ),
+          _buildErrorContent(),
+          _buildErrorAction(),
         ],
       ),
     );

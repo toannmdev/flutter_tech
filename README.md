@@ -20,20 +20,9 @@ For search feature (Optional extra)
 - About unit test, I skip this.
 
 ## Install
-I uploaded apk and ipa file to diawi, I used free account, so these files will be expired on `Wednesday, 25/08/2021 14:00`
-### On Android
-1. Open link: [diawi android](https://i.diawi.com/XQ5KDX) 
-2. Download apk file, and install it.
+> flutter run
 
-### On iOS:
-I do not have any iOS device here, so I can not download and seft test this release ipa, so sorry if it would be error...
-1. Open link with safari: [diawi iOS](https://i.diawi.com/mLiXLu) 
-2. Accept installing.
-
-If you can not download install file, please contact me via:
-- gmail: [Mail to ToanNM](mailto:toannm.jsc@gmail.com) 
-- skype: gs.hbsky
-- phone: (+84)985942382
+The flutter run command both builds and installs the Flutter app to your device or emulator.
 
 ## Design Pattern:
 1. GetX design Pattern for easy coding.

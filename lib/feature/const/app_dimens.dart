@@ -1,4 +1,6 @@
-class AppDimens {
+abstract class AppDimens {
+  const AppDimens._();
+
   static const double notificationImageSize = 56;
   static const double notificationIconSize = 24;
 
