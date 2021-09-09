@@ -3,18 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:toannm_test/feature/const/app_colors.dart';
-import 'package:toannm_test/feature/const/app_dimens.dart';
-import 'package:toannm_test/feature/const/app_str.dart';
-import 'package:toannm_test/feature/const/app_style.dart';
-import 'package:toannm_test/feature/notification/widgets/item_widget.dart';
-import 'package:toannm_test/utils/widget/utils_widget.dart';
-import 'controller/controller.dart';
+import 'package:toannm_test/configs/app_colors.dart';
+import 'package:toannm_test/configs/app_dimens.dart';
+import 'package:toannm_test/configs/app_str.dart';
+import 'package:toannm_test/configs/app_style.dart';
+import 'package:toannm_test/screens/notification/controllers/controller.dart';
+import 'package:toannm_test/screens/notification/widgets/notification_item.dart';
+import 'package:toannm_test/theme/base_theme.dart';
+import 'package:toannm_test/widgets/utils_widget.dart';
 
-class NotificationPage extends GetView {
-  @override
-  NotificationController get controller => Get.put(NotificationController());
-
+class NotificationPage extends GetView<NotificationController> {
   @override
   Widget build(BuildContext context) {
     return Obx(
@@ -33,7 +31,9 @@ class NotificationPage extends GetView {
       backgroundColor: Colors.white, elevation: 0,
       centerTitle: false,
       // TODO (toannm) translate string
-      title: const Text("Thông báo", style: AppStyle.textHeader1Style),
+      title: InkWell(
+          onTap: () => ThemeService.instance.switchTheme(),
+          child: Text("Thông báo", style: Get.textTheme.headline3!)),
       actions: [
         TextButton(
           onPressed: () {
@@ -135,5 +135,13 @@ class NotificationPage extends GetView {
         ],
       ),
     );
+  }
+}
+
+class TestWidget extends StatelessWidget {
+  const TestWidget();
+  @override
+  Widget build(BuildContext context) {
+    return Text('Text');
   }
 }

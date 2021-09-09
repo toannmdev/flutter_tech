@@ -4,14 +4,14 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:toannm_test/feature/const/app_colors.dart';
+import 'package:toannm_test/configs/app_colors.dart';
 
 class NotificationResponse {
   NotificationResponse({
     this.data,
   });
 
-  final List<Datum>? data;
+  final List<NotificationData>? data;
 
   factory NotificationResponse.fromRawJson(String str) =>
       NotificationResponse.fromJson(json.decode(str));
@@ -22,7 +22,7 @@ class NotificationResponse {
       NotificationResponse(
         data: json["data"] == null
             ? null
-            : List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
+            : List<NotificationData>.from(json["data"].map((x) => NotificationData.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -32,8 +32,8 @@ class NotificationResponse {
       };
 }
 
-class Datum {
-  Datum({
+class NotificationData {
+  NotificationData({
     required this.id,
     this.type,
     required this.title,
@@ -74,14 +74,14 @@ class Datum {
   // client
   late List<String> highlightChars;
 
-  factory Datum.fromRawJson(String str) => Datum.fromJson(json.decode(str));
+  factory NotificationData.fromRawJson(String str) => NotificationData.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory Datum.fromJson(Map<String, dynamic> json) {
+  factory NotificationData.fromJson(Map<String, dynamic> json) {
     Message? message =
         json["message"] == null ? null : Message.fromJson(json["message"]);
-    Datum datum = Datum(
+    NotificationData datum = NotificationData(
       id: json["id"] == null ? null : json["id"],
       type: json["type"] == null ? null : json["type"],
       title: json["title"],

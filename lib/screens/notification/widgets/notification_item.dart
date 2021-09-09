@@ -1,16 +1,16 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:toannm_test/feature/const/app_colors.dart';
-import 'package:toannm_test/feature/const/app_dimens.dart';
-import 'package:toannm_test/feature/const/app_str.dart';
-import 'package:toannm_test/feature/const/app_style.dart';
-import 'package:toannm_test/feature/notification/model/response.dart';
-import 'package:toannm_test/utils/widget/utils_widget.dart';
+import 'package:toannm_test/configs/app_colors.dart';
+import 'package:toannm_test/configs/app_dimens.dart';
+import 'package:toannm_test/configs/app_str.dart';
+import 'package:toannm_test/configs/app_style.dart';
+import 'package:toannm_test/models/notify/notification_response.dart';
+import 'package:toannm_test/widgets/utils_widget.dart';
 import 'package:toannm_test/utils/date_utils.dart';
 
 class NotificationItem extends StatelessWidget {
-  final Datum item;
+  final NotificationData item;
 
   const NotificationItem({Key? key, required this.item}) : super(key: key);
 

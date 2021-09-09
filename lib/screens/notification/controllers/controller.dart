@@ -3,18 +3,18 @@ import 'dart:async';
 import 'package:diacritic/diacritic.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:toannm_test/feature/base/controller/base_list_controller.dart';
-import 'package:toannm_test/feature/notification/model/response.dart';
-import 'package:toannm_test/feature/notification/repository/repository.dart';
-import 'package:toannm_test/feature/widget_actions/list_actions.dart';
+import 'package:toannm_test/base/controllers/base_list_controller.dart';
+import 'package:toannm_test/models/notify/notification_response.dart';
+import 'package:toannm_test/screens/notification/repository/repository.dart';
+import 'package:toannm_test/base/widget_actions/list_actions.dart';
 
 class NotificationController
-    extends BaseListController<NotificationResponse, Datum>
+    extends BaseListController<NotificationResponse, NotificationData>
     implements ListAction<NotificationResponse> {
   final NotificationRepository _repository = NotificationRepository();
 
   // for filtering Datum
-  final List<Datum> _totalData = [];
+  final List<NotificationData> _totalData = [];
 
   RxBool isSearching = false.obs;
 

@@ -2,10 +2,15 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:toannm_test/feature/notification/notification_page.dart';
+import 'package:toannm_test/routes/app_page.dart';
+import 'package:toannm_test/routes/app_routes.dart';
+import 'package:toannm_test/storages/hive_app.dart';
+import 'package:toannm_test/theme/base_theme.dart';
 
-void main() {
+void main() async {
   Get.put(Dio());
+
+  await HiveApp.instance.initHive();
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.white,
@@ -16,16 +21,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final route = [GetPage(name: '/', page: () => NotificationPage())];
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "ToanNM Test",
-      getPages: route,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.light(),
-      initialRoute: '/',
+      getPages: AppPage.pages,
+      theme: ThemeService.instance.getThemeApp(),
+      darkTheme: ThemeService.instance.getThemeApp(),
+      themeMode: ThemeMode.light,
+      initialRoute: AppRoutes.defaultRoute,
       builder: (context, child) {
         return ScrollConfiguration(
           behavior: MyBehavior(),

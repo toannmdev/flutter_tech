@@ -1,4 +1,4 @@
-import 'package:toannm_test/feature/notification/model/response.dart';
+import 'package:toannm_test/models/notify/notification_response.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart' show rootBundle;
 

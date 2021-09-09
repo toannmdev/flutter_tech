@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:toannm_test/feature/widget_actions/list_actions.dart';
+import 'package:toannm_test/base/widget_actions/list_actions.dart';
 
 /// [R] : response
 /// [T] : data
@@ -49,7 +49,7 @@ abstract class BaseListController<R, T> extends GetxController
   @override
   void onLoadMore() {
     if (!isEndOfPage()) {
-      // loadMore here.
+      //TODO loadMore here.
     }
   }
 

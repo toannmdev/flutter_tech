@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:toannm_test/feature/const/app_colors.dart';
-import 'package:toannm_test/feature/const/app_dimens.dart';
+import 'package:toannm_test/configs/app_colors.dart';
+import 'package:toannm_test/configs/app_dimens.dart';
 
 class UtilWidget {
   static Widget buildImageAsset(String assetImg,
